@@ -4,7 +4,7 @@ from ultralytics import YOLO
 model = YOLO('yolov8s.pt')
 
 results = model.train(
-    data='Korea-Car-License-Plate-1/data.yaml',
+    data='car_plate/data.yaml',
     epochs=100,
     batch=8,
     device='mps'
