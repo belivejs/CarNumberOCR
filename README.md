@@ -34,8 +34,8 @@ This project is built using Python. The key libraries and their recommended vers
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/YourUsername/Your-Repository-Name.git
-   cd Your-Repository-Name
+   git clone https://github.com/belivejs/CarNumberOCR.git
+   cd CarNumberOCR
    ```
 
 2. Install the required packages:
