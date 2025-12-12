@@ -2,9 +2,13 @@ import easyocr
 import cv2
 
 reader = easyocr.Reader(['ko'])  # 한국어, 영어, 숫자 인식
-img_path = 'result_crop.jpg'
-img = cv2.imread(img_path)
-result = reader.readtext(img_path)
 
+def run_ocr(img_path='result_crop.jpg'):
+    try:
+        result = reader.readtext(img_path)
+        return result[0][1]
+    except:
+        return "인식 실패"
 
-print(result[0][1])
+if __name__ == "__main__":
+    print(run_ocr())
