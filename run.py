@@ -1,5 +1,6 @@
 from ultralytics import YOLO
 import cv2
+import os
 
 # 학습된 모델 로드
 model = YOLO('runs/detect/train/weights/best.pt')
@@ -11,4 +12,5 @@ results = model.predict('test_car.jpg', conf=0.7)
 results[0].show()
 
 # 또는 저장
-results[0].save('result.jpg')
+os.makedirs('images', exist_ok=True)
+results[0].save('images/result.jpg')

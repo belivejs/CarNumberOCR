@@ -17,7 +17,7 @@ def update_results():
     
     # 1. 원본 탐지 이미지 로드 (result.jpg)
     try:
-        img = Image.open("result.jpg")
+        img = Image.open("images/result.jpg")
         # GUI 크기에 맞춰 리사이즈 (가로 350px 기준)
         w, h = img.size
         ratio = 350 / w
@@ -32,7 +32,7 @@ def update_results():
 
     # 2. 크롭된 번호판 이미지 로드 (result_crop.jpg)
     try:
-        img_crop = Image.open("result_crop.jpg")
+        img_crop = Image.open("images/result_crop.jpg")
         w, h = img_crop.size
         ratio = 350 / w
         new_h = int(h * ratio)

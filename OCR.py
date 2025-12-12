@@ -3,7 +3,7 @@ import cv2
 
 reader = easyocr.Reader(['ko'])  # 한국어, 영어, 숫자 인식
 
-def run_ocr(img_path='result_crop.jpg'):
+def run_ocr(img_path='images/result_crop.jpg'):
     try:
         result = reader.readtext(img_path)
         return result[0][1]

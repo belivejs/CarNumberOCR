@@ -7,7 +7,7 @@ from ultralytics import YOLO
 # 팀원 환경에 맞게 MODEL_PATH가 정확한지 확인이 필요합니다.
 # -------------------------------------------------------------------
 MODEL_PATH = 'runs/detect/train/weights/best.pt'
-SAVE_NAME = "result_crop.jpg"
+SAVE_NAME = "images/result_crop.jpg"
 
 def crop_plate(image_path):
     """
@@ -62,6 +62,7 @@ def crop_plate(image_path):
         cropped_img = img[y1:y2, x1:x2]
         
         try:
+            os.makedirs(os.path.dirname(SAVE_NAME), exist_ok=True)
             cv2.imwrite(SAVE_NAME, cropped_img)
             print(f"[Success] 크롭 이미지 저장 완료: {SAVE_NAME}")
             return SAVE_NAME
