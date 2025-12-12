@@ -6,4 +6,5 @@ img_path = 'result_crop.jpg'
 img = cv2.imread(img_path)
 result = reader.readtext(img_path)
 
-print(result)
+
+print(result[0][1])
