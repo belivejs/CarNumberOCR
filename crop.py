@@ -75,7 +75,7 @@ def crop_plate(image_path):
 # -------------------------------------------------------------------
 if __name__ == "__main__":
     # 테스트용 이미지 경로 설정
-    test_photo = "datasets/test/images/20240923041858_006-9692_CAM_1_jpg.rf.581d567e5a8bd7dcf5e46a3fe0ba645f.jpg"
+    test_photo = "datasets/test/images/20240923033528_006-6974_CAM_1_jpg.rf.0a6f5c09cc25f0b3a7cc864f73d92dbd.jpg"
     
     # 함수 호출 및 결과 확인
     saved_file = crop_plate(test_photo)
